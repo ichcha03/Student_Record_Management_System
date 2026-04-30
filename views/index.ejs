@@ -1,0 +1,18 @@
+<h1>All Students</h1>
+
+<a href="/add">Add Student</a>
+
+<ul>
+  <% students.forEach(s => { %>
+    <li>
+      <%= s.name %> | <%= s.rollNumber %>
+
+      <a href="/view/<%= s._id %>">View</a>
+      <a href="/edit/<%= s._id %>">Edit</a>
+
+      <form action="/<%= s._id %>?_method=DELETE" method="POST">
+        <button>Delete</button>
+      </form>
+    </li>
+  <% }) %>
+</ul>

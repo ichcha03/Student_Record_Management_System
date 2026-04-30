@@ -1,0 +1,12 @@
+<h1>Edit Student</h1>
+
+<form action="/<%= student._id %>?_method=PUT" method="POST">
+  <input name="name" value="<%= student.name %>" />
+  <input name="rollNumber" value="<%= student.rollNumber %>" />
+  <input name="branch" value="<%= student.branch %>" />
+  <input name="marks" value="<%= student.marks %>" />
+
+  <button>Update</button>
+</form>
+
+<a href="/">Back</a>
